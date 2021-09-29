@@ -5,7 +5,7 @@ import { dataCourses } from './dataCourses.js';
 
 import { Student } from './student.js';
 
-import { dataStudent } from './dataStudent';
+import { dataStudent } from './dataStudent.js';
 
 let coursesTbody: HTMLElement = document.getElementById('courses')!;
 let studentTbody: HTMLElement = document.getElementById('student')!;
@@ -83,7 +83,7 @@ function applyFilterByCreditRange() {
   let rangeMin = inputSearchBoxMin.value;
   let rangeMax = inputSearchBoxMax.value;
   rangeMin = (rangeMin == null) ? '' : rangeMin;
-  rangeMax = (rangeMin == null) ? '' : rangeMax;
+  rangeMax = (rangeMax == null) ? '' : rangeMax;
   clearCoursesInTable();
   let coursesFiltered: Course[] = searchCourseByCreditRange(rangeMin, rangeMax, dataCourses);
   totalCreditElm.innerHTML = `${getTotalCredits(coursesFiltered)}`
