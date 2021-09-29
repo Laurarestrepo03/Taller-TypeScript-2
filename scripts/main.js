@@ -55,7 +55,7 @@ function applyFilterByCreditRange() {
     var rangeMin = inputSearchBoxMin.value;
     var rangeMax = inputSearchBoxMax.value;
     rangeMin = (rangeMin == null) ? '' : rangeMin;
-    rangeMax = (rangeMin == null) ? '' : rangeMax;
+    rangeMax = (rangeMax == null) ? '' : rangeMax;
     clearCoursesInTable();
     var coursesFiltered = searchCourseByCreditRange(rangeMin, rangeMax, dataCourses);
     totalCreditElm.innerHTML = "" + getTotalCredits(coursesFiltered);
